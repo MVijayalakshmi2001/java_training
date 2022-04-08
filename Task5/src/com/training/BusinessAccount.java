@@ -8,14 +8,14 @@ public class BusinessAccount extends ClassBankAccount {
 	public double deposit(double amount) {
 		
 		if(getDepositAmount()>maxDeposit) {
-			System.out.println("Deposit less than 1000000");
+			System.err.println("Enter amount less than 1000000");
 		}
 		return maxDeposit;
 	}
 	@Override
 	public double withdraw(double amount) {
 		 if(getBalance()<minBalance) {
-			 System.out.println("Balance is less than minimum balance");
+			 System.err.println("Balance is less than minimum balance");
 		 }
 		return minBalance;
 	}
