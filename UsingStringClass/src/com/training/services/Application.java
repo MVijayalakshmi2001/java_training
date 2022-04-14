@@ -5,7 +5,13 @@ public class Application {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+
 		StringService service=new StringService();
+		
+		String city="CHENNAI";
+		
+		System.out.println(String.format("%s", city));
+		System.out.println(String.format("%3$.4f %2$.3f %1$.2f", 100.456,200.4567,300.3545));
 		//int key=1;
 		//int key=2;
 		int key=14;
