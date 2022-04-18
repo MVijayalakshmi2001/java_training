@@ -39,10 +39,10 @@ public class Product implements Comparable<Product>{
 				+ "]";
 	}
 	@Override
-	public int compareTo(Product o) {
+	public int compareTo( Product o) {
 		// TODO Auto-generated method stub
 	
-		return this.getProductName().compareTo(o.getProductName());
+		return this.getRatePerUnit().compareTo(o.getRatePerUnit());
 	}
 	
 }
