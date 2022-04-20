@@ -21,8 +21,8 @@ public class Application {
 		Book java=new Book(101,"Java", "suba", 450);
 		Book spring=new Book(102, "Spring", "Mad", 650);
 		Book maven=new Book(103, "Maven", "Hari", 750);
-		Book html=new Book(104, "html", "Priya", 850);
-		Book python=new Book(105, "python", "Sathya", 950);
+		Book html=new Book(104, "Html", "Priya", 850);
+		Book python=new Book(105, "Python", "Sathya", 950);
 		
 		Crudrepository service=new BookServices();
 		
@@ -105,8 +105,22 @@ public class Application {
 		
 		List<String> grtThanNineHundred=((BookServices)service).getBookNumeGrtThanPrice(900);
 		grtThanNineHundred.forEach(System.out::println);
-	}	
+		
+		
+		System.out.println("===Sorted by name===");
+		
+		List<Book> sortedbyName=((BookServices)service).sortedByName();
+		sortedbyName.forEach(System.out::println);
+
 	
 	
 	
+		System.out.println("===Sorted by number in reverse order===");
+	
+		List<Book> sortedByNumber=((BookServices)service).sortedByNumberDesc();
+		sortedByNumber.forEach(System.out::println);
+}	
 }
+	
+	
+

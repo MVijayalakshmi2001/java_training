@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 import com.training.model.Crudrepository;
 
@@ -84,6 +85,22 @@ public class BookServices implements Crudrepository {
 		
 		return this.bookList.stream().filter(e->e.getPrice()>price).map(e->e.getBookName()).collect(toList());
 	}
+	
+	
+	//using sorted
+	public List<Book> sortedByName(){
+		
+		return this.bookList.stream().sorted(Comparator.comparing(Book::getBookName)).collect(toList());
+	}
+	
+	//using reverse sorted
+	
+	public List<Book> sortedByNumberDesc(){
+		
+		return this.bookList.stream().sorted(Comparator.reverseOrder()).collect(toList());
+	}
+	
+	
 	//manually iterated 
 
 	public List<Book> getBooksGrtThan(double price){
