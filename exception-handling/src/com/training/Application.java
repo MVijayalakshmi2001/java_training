@@ -1,3 +1,4 @@
+
 package com.training;
 
 import com.training.exception.RangeCheckException;
