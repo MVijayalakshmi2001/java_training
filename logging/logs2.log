@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-04-19T12:42:45</date>
+  <millis>1650352365980</millis>
+  <sequence>0</sequence>
+  <logger>com.example.Book</logger>
+  <level>INFO</level>
+  <class>com.example.LoggingWithPropAndSaveToFile</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Logging properties done right</message>
+</record>
+<record>
+  <date>2022-04-19T12:42:45</date>
+  <millis>1650352365995</millis>
+  <sequence>1</sequence>
+  <logger>com.example.Book</logger>
+  <level>INFO</level>
+  <class>com.example.Book</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Book with Zero Argument Constructed</message>
+</record>
+<record>
+  <date>2022-04-19T12:42:45</date>
+  <millis>1650352365996</millis>
+  <sequence>2</sequence>
+  <logger>com.example.Book</logger>
+  <level>INFO</level>
+  <class>com.example.LoggingWithPropAndSaveToFile</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Book [bookNumber=0, bookName=null, bookAuthor=null, price=0.0]</message>
+</record>
+</log>
