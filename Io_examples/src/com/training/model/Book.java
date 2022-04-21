@@ -1,22 +1,44 @@
 package com.training.model;
 
-public class Book implements Comparable<Book> {
+import java.io.Serializable;
 
+public class Book implements Comparable<Book>,Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2025L;
 	private int bookNumber;
 	private String bookName;
 	private String bookAuthor;
 	private double price;
+	private double discount;
+	
 	public Book() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Book(int bookNumber, String bookName, String bookAuthor, double bookId) {
+	
+
+	public Book(int bookNumber, String bookName, String bookAuthor, double price, double discount) {
 		super();
 		this.bookNumber = bookNumber;
 		this.bookName = bookName;
 		this.bookAuthor = bookAuthor;
-		this.price = bookId;
+		this.price = price;
+		this.discount = discount;
 	}
+
+
+	public Book(int bookNumber, String bookName, String bookAuthor, double price) {
+		super();
+		this.bookNumber = bookNumber;
+		this.bookName = bookName;
+		this.bookAuthor = bookAuthor;
+		this.price = price;
+		
+	}
+	
 	public int getBookNumber() {
 		return bookNumber;
 	}
@@ -38,9 +60,11 @@ public class Book implements Comparable<Book> {
 	public double getPrice() {
 		return price;
 	}
-	public void setBookId(double price ) {
+	public void setPrice(double price ) {
 		this.price = price ;
 	}
+	
+	
 	@Override
 	public String toString() {
 		return bookNumber + "," + bookName + "," +bookAuthor + "," +price;

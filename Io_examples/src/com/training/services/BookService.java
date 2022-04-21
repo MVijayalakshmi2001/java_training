@@ -1,10 +1,51 @@
 package com.training.services;
 
 import java.io.*;
+
 import java.util.*;
+
 import com.training.model.Book;
 
 public class BookService {
+	
+	
+	public Object readFromStream(File file) {
+		
+
+		Object obj=null;
+		
+		try(ObjectInputStream inputStream=new ObjectInputStream(new FileInputStream(file))){
+			
+			obj=inputStream.readObject();
+			
+		}catch (IOException | ClassNotFoundException e) {
+
+			e.printStackTrace();
+		}
+		
+		return obj;
+	}
+	
+	
+	public boolean writeToStream(File file,Book book) {
+		
+		boolean result=false;
+		
+		try(ObjectOutputStream outputStream=new ObjectOutputStream(new FileOutputStream(file))){
+			
+			outputStream.writeObject(book);
+			
+			result = true;
+			
+		}catch (IOException e) {
+			
+			e.printStackTrace();
+			
+		}
+		return result;
+		
+		
+	}
 
 	public boolean writeToFile(File file,Book book) {
 		
