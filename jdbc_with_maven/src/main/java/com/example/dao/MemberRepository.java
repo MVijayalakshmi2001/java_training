@@ -19,7 +19,19 @@ public class MemberRepository implements CrudRepository<Member> {
 	}
 
 	public int add(Member obj) {
-		// TODO Auto-generated method stub
+		
+		int rowAdded=0;
+		
+		String sql="insert into viji_member101 values(?,?,?)";
+		
+		try(PreparedStatement pstmt = con.prepareStatement(sql)){
+			
+			
+			
+		}catch (SQLException e) {
+			
+			 
+		}
 		return 0;
 	}
 
@@ -53,9 +65,7 @@ public class MemberRepository implements CrudRepository<Member> {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-			
-			
-			
+				
 		return memberList;
 		
 	}

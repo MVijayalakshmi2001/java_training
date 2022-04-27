@@ -1,11 +1,9 @@
 package com.example;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.time.LocalDate;
 
 import com.example.dao.MemberRepository;
+import com.example.util.ConnectionFactory;
 
 /**
  * Hello world!
@@ -17,19 +15,13 @@ public class App
     
         Connection con;
 		
-		try {
-			con = DriverManager.getConnection("jdbc:oracle:thin:@10.90.1.105:1521/DEV","HR", "HR");
-			
-			MemberRepository service = new MemberRepository(con);
-			
-			service.findAll().forEach(System.out::println);
-
+		con= ConnectionFactory.getOracleConnection();
 		
-			
-		}catch(SQLException e) {
-    	
-    	e.printStackTrace();
-		}
+		MemberRepository repo = new MemberRepository(con);
+		
+		System.out.println(con);
+//			
+//			repo.findAll().forEach(System.out::println);
     }
     
 }
