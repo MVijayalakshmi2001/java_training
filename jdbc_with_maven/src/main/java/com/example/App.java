@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 import com.example.dao.MemberRepository;
 import com.example.dao.ProductService;
+import com.example.entity.Invoice;
 import com.example.entity.Member;
 import com.example.entity.Product;
 import com.example.util.ConnectionFactory;
@@ -70,8 +71,24 @@ public class App
 
     	//member();
     	
-    	product(); 
+    	//product(); 
+    	
+    	Connection con = ConnectionFactory.getOracleConnection();
+		
+		ProductService service = new ProductService(con);
+		
+		//Product kathli=new Product(73, "Moti laddu", 500.00);
+		
+		//Product jamun=new Product(44," badusha",450.00);
     	 
-            
+        //service.usingTxn(kathli, jamun);
+		
+		Product appliance=new Product(105, "car", 90000.00);
+        
+        Invoice data=new Invoice(222, "shyam", 7, 105);
+        
+        service.usingTxnWithCatchBlock(appliance, data);
+        
+        
 }
 }

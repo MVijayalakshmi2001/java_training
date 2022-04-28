@@ -95,6 +95,14 @@ INSERT INTO viji_loan_application VALUES(11,300,25000.00);
 
 SELECT * FROM viji_customer vc , viji_loan_application vp WHERE vc.customer_id=vp.customer_ref AND vc.customer_id=300
 
+SELECT * FROM viji_loan_application;
+
+SELECT * FROM viji_customer
+
+UPDATE viji_customer SET credit_score=689 WHERE customer_id=44
+
+UPDATE viji_loan_application SET loan_amount=35000 WHERE application_number=11
+
 
 
 
