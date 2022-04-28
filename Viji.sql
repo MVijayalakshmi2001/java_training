@@ -10,6 +10,7 @@ DESCRIBE vijimauthor
 create table vijayabook(book_number number(3) PRIMARY KEY, book_name VARCHAR2(20),price number(10,2), author_ref number(10) REFERENCES vijimauthor(phone_number));
 DESCRIBE vijayabook
 
+<<<<<<< HEAD
 DESCRIBE vijiproduct
 
 select * from vijiproduct
@@ -64,3 +65,5 @@ rename vijilib_issue to viji_issue
 drop table viji_issue
 
 create table viji1_issue(lib_issue_id number(10) PRIMARY KEY, book_no NUMBER(6) REFERENCES viji_book101(book_no),member_id NUMBER(5) REFERENCES viji_member101(member_id),issue_date date ,return_date date)
+=======
+>>>>>>> refs/remotes/origin/master
