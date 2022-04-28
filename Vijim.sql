@@ -85,6 +85,17 @@ DELETE FROM viji1_issue101 WHERE membership_id = 1 OR issue_date > '22-04-2022 '
 DELETE FROM viji1_books WHERE category!='database' AND category!='rdbms'
 
 
+CREATE TABLE viji_customer(customer_id NUMBER(5) PRIMARY KEY,customer_name VARCHAR2(20),phone_number NUMBER(10),credit_score NUMBER(5) CHECK (credit_score BETWEEN 300 AND 800))
+
+CREATE TABLE viji_loan_application(application_number NUMBER(5) PRIMARY KEY,customer_ref NUMBER(5) REFERENCES viji_customer(customer_id),loan_amount NUMBER(10,2)) 
+
+INSERT INTO viji_customer VALUES(300,'reya',9876543210,400);
+
+INSERT INTO viji_loan_application VALUES(11,300,25000.00);
+
+SELECT * FROM viji_customer vc , viji_loan_application vp WHERE vc.customer_id=vp.customer_ref AND vc.customer_id=300
+
+
 
 
 

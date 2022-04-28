@@ -25,9 +25,24 @@ public class ConnectionFactory {
 		
 	}
 	
-	public Connection getPostgressConnection() {
+	public static Connection getPostgressConnection() {
 		
-		return null;
+		Connection con=null;
+		try {
+		
+			ResourceBundle labels = ResourceBundle.getBundle("application");
+		
+	
+			con=DriverManager.getConnection(labels.getString("datasource.postgres.url"),labels.getString("datasource.postgres.username"),
+					labels.getString("datasource.postgres.password"));
+			
+		}catch (SQLException e) {
+			// TODO: handle exception
+			
+			e.printStackTrace();
+
+		}
+		return con;
 		
 		
 	}

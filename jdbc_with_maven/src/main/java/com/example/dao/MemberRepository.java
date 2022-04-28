@@ -22,17 +22,27 @@ public class MemberRepository implements CrudRepository<Member> {
 		
 		int rowAdded=0;
 		
-		String sql="insert into viji_member101 values(?,?,?)";
+		String sql="insert into viji_member101 values(?,?,?,?,?,?,?,?)";
 		
 		try(PreparedStatement pstmt = con.prepareStatement(sql)){
 			
+			pstmt.setInt(1,obj.getMemberId());
+			pstmt.setString(2, obj.getMemberName());
+			pstmt.setString(4,obj.getMemberAddress());
+			pstmt.setDate(5,Date.valueOf(obj.getAccountOpenDate()));
+			pstmt.setString(3, obj.getMembershipType());
+			pstmt.setDouble(6, obj.getFeesPaid());
+			pstmt.setInt(7, obj.getMaxBookAllowed());
+			pstmt.setDouble(8, obj.getPenaltyAmount());
 			
+			rowAdded=pstmt.executeUpdate();
 			
 		}catch (SQLException e) {
 			
-			 
+			e.printStackTrace();
+
 		}
-		return 0;
+		return rowAdded;
 	}
 
 	public List<Member> findAll() {
