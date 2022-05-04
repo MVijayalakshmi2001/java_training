@@ -37,8 +37,7 @@ public class App
 		
 		System.out.println("RowAdded="+ rowAdded);
 		
-		
-		
+		//LoanApplication deleteId
 		//Optional<LoanApplication> findId=serv.findById(43);
 		
 		//System.out.println(findId);

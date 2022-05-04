@@ -103,7 +103,7 @@ UPDATE viji_customer SET credit_score=689 WHERE customer_id=44
 
 UPDATE viji_loan_application SET loan_amount=35000 WHERE application_number=11
 
-
+SELECT * FROM viji_invoice
 
 
 

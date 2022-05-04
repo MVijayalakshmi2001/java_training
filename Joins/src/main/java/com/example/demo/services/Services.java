@@ -137,7 +137,7 @@ public class Services implements CrudRepository<LoanApplication> {
 			
 			int rowsDeleted=0;
 			
-			String sql="select vc.customer_id,vc.customer_name,vc.phone_number,vc.credit_score,vp.application_number,vp.customer_ref,vp.loan_amount from viji_customer vc , viji_loan_application vp where  vc.customer_id =?";
+			String sql="delete vc.customer_id,vc.customer_name,vc.phone_number,vc.credit_score,vp.application_number,vp.customer_ref,vp.loan_amount from viji_customer vc , viji_loan_application vp where  vc.customer_id =?";
 			
 			try(PreparedStatement pstmt = con.prepareStatement(sql)){
 				
