@@ -34,11 +34,14 @@ public class StudentService {
 	}
 	
 
-	public Student update(int oldValue,Student newValue) {
+	public Student update(int id,Student newValue) {
 		
-		int idxPos=this.studentList.indexOf(oldValue);
+	int idxPos = this.studentList.indexOf(findById(id).get());
 		
-		return this.studentList.set(idxPos, newValue) ;
+	 this.studentList.set(idxPos, newValue);
 		
+	 return newValue;
 	}
+
+	
 }
