@@ -62,5 +62,6 @@ SELECT * FROM viji_bill
 SELECT * FROM viji_seqe
 SELECT b.bill_number,b.bill_date,b.amount FROM  VIJI_BILL a, VIJI_BILL b WHERE a.cust_ref=201 AND a.bill_date = b.bill_date
 
+SELECT * FROM viji_student
 
 
