@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class WelcomeController {
 	
 	@RequestMapping(value="/greet",method=RequestMethod.GET)
-	@ResponseBody
+
+
 	public String getMessage() {
 		
 		return "<h1 style='text-align:center'>Welcome to spring MVC</h1>";
