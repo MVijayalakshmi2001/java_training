@@ -10,6 +10,8 @@
 <body>
 <h1>${title}</h1>
 
+<img src="images/logo.jpg" alt="product" >
+
 <form:form method="post" modelAttribute="command">
 
 <label>Product Id</label>

@@ -64,4 +64,4 @@ SELECT b.bill_number,b.bill_date,b.amount FROM  VIJI_BILL a, VIJI_BILL b WHERE a
 
 SELECT * FROM viji_student
 
-
+SELECT * FROM viji_doctor

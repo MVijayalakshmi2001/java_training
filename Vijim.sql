@@ -14,6 +14,21 @@ DESCRIBE vijiproduct
 
 select * from vijiproduct
 
+select * from viji_doctor_one_To_Many
+
+select * from viji_patient_one_To_Many
+
+
+select * from viji_seminar_one_To_one
+
+select * from viji_doctor_one_To_Many_bid
+
+select * from viji_patient_one_To_Many_bid
+
+
+select * from viji_speaker_one_To_one
+
+
 describe viji_book
 
 drop table viji_member

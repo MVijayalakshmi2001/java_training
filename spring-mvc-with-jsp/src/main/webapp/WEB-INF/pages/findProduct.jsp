@@ -9,6 +9,7 @@
 <body>
 <form action="/product/delete" method="post">
 <input type="number" name="id">
-<input type="submit" value="search">
+<input type="submit" value="delete">
+</form>
 </body>
 </html>

@@ -11,6 +11,6 @@
 <form action="/product/srch" method="post">
 <input type="number" name="id">
 <input type="submit" value="search">
-
+</form>
 </body>
 </html>

@@ -5,15 +5,26 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style type="text/css">
+ul>li{
+
+
+margin: 10px;
+font-size: 1.4em;
+}
+a{
+text-decoration: none;
+}
+</style>
 </head>
 <body>
-${title}
-<ol>
-<li><a href="http://localhost:8080/product">Add</a></li>
-<li><a href="http://localhost:8080/product/srch">find</a></li>
-<li><a href="http://localhost:8080/mvc/home">All Product</a></li>
-<li><a href="http://localhost:8080/product/delete">Delete</a></li>
-</ol>
+<h1>${title}</h1>
+<ul>
+<li><a href="product">Add</a></li>
+<li><a href="product/srch">find</a></li>
+<li><a href="mvc/home">All Product</a></li>
+<li><a href="product/delete">Delete</a></li>
+</ul>
 
 </body>
 </html>

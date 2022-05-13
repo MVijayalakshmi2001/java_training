@@ -30,6 +30,22 @@ public class ProductController {
 		return "addproduct";
 	}
 	
+	@RequestMapping(value = "/product",method=RequestMethod.POST)
+	public String submitForm(@ModelAttribute("command") Product entity) {
+		
+		int rowAdded;
+		try {
+			rowAdded=this.repo.add(entity);
+				return "success";
+		
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			return "failure";
+		}
+	
+	}
+	
 	
 	@RequestMapping(value= "/product/srch", method = RequestMethod.GET)
 	public String initSearchForm(Model model) {
@@ -38,8 +54,8 @@ public class ProductController {
 			
 			return "searchProduct";
 		}
-	@RequestMapping(value= "/product/srch", method = RequestMethod.POST)
-		
+	
+	@RequestMapping(value= "/product/srch", method = RequestMethod.POST)	
 		public String searchProduct(@RequestParam("id") int id,Model model) {
 			
 			Product entity = repo.findById(id);
@@ -56,13 +72,14 @@ public class ProductController {
 			
 			return "findProduct";
 		}
+	
 	@RequestMapping(value= "/product/delete", method = RequestMethod.POST)
-
 	public String deleteProduct(@RequestParam("id") int id,Model model) {
 		
 		int entity = repo.remove(id);
 
 		model.addAttribute("delete",entity);
+		
 		return "deleteProduct";
 	}
 	
@@ -76,24 +93,11 @@ public class ProductController {
 	}
 	
 	
-	@RequestMapping(value = "/product",method=RequestMethod.POST)
-	public String submitForm(@ModelAttribute("command") Product entity) {
-		
-		int rowAdded;
-		try {
-			rowAdded=this.repo.add(entity);
-				return "success";
-		
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-			return "failure";
-		}
+	
 		
 		
 		
 	}
 	
 	
-}
 
