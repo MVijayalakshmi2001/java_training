@@ -21,12 +21,20 @@ select * from viji_patient_one_To_Many
 
 select * from viji_seminar_one_To_one
 
-select * from viji_doctor_one_To_Many_bid
+drop table viji_doctor_one_To_Many_bid
+drop table viji_patient_one_To_Many_bid
 
-select * from viji_patient_one_To_Many_bid
+select * from viji_patient_one_To_Many_bid2
 
+select * from viji_doctor_one_To_Many_bid2
 
 select * from viji_speaker_one_To_one
+
+select * from viji_insurance
+
+select * from viji_insurance_master
+
+select * from viji_health_insurance
 
 
 describe viji_book
@@ -120,7 +128,7 @@ UPDATE viji_loan_application SET loan_amount=35000 WHERE application_number=11
 
 SELECT * FROM viji_invoice
 
-
+SELECT * FROM viji_user
 
 
 
