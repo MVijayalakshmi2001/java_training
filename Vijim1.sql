@@ -84,10 +84,36 @@ DELETE FROM viji1_issue101 WHERE membership_id = 2 AND issue_date > '21-04-2022 
 
 DELETE FROM viji1_books WHERE category!='database' AND category!='rdbms'
 
+select * from viji_passenger
+
+select * from viji_trip_history
+
+ drop table viji_trip_history
+ 
+ drop table viji_passenger
 
 
+CREATE TABLE viji_users1(user_name VARCHAR(20) NOT NULL, password VARCHAR(200) DEFAULT NULL,
+enabled VARCHAR(10) DEFAULT NULL,PRIMARY KEY(user_name));
+
+select * from viji_users1
+
+drop table viji_users1
+
+drop table viji_authorities
+
+CREATE TABLE viji_authorities(user_name VARCHAR2(50) NOT NULL,authority VARCHAR2(50) NOT NULL,KEY fk_viji_authorities_viji_users1(user_name),
+CONSTRAINT fk_viji_authorities_viji_users1 FOREIGN KEY(user_name) REFERENCES viji_users1(user_name))
 
 
+CREATE TABLE viji_authorities(user_name varchar(50) NOT NULL, authority varchar(50) NOT NULL,constraint viji_authorities_users
+foreign key(user_name) REFERENCES viji_users1 (user_name))
 
 
+create table viji_users(username varchar(20) not null,password varchar(200) default null, enabled varchar(10) default null,
+Primary key (username));
 
+create table viji_authorities(username varchar(50) not null,authority varchar(50) not null,
+constraint fk_viji_authorities_users foreign key(username) references viji_users(username));
+
+select * from viji_credit_card
