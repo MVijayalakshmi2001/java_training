@@ -1,0 +1,12 @@
+server:
+  port: 5050
+
+
+spring:
+  application:
+    name: driver-service
+  config:
+    import: configserver:http://localhost:8880
+     
+
+  
