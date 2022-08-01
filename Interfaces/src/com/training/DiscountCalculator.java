@@ -7,7 +7,7 @@ public class DiscountCalculator implements Conditional {
 	@Override
 	public boolean test(int value) {
 		// TODO Auto-generated method stub
-		return value>500;
+		return value>500;    
 	}
 
 	@Override

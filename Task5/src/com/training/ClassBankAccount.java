@@ -4,8 +4,6 @@ public abstract class ClassBankAccount {
 	
 	private String accountHolderName;
 	private double balance;
-	private double depositAmount;
-	
 
 	public ClassBankAccount() {
 		super();
@@ -13,11 +11,11 @@ public abstract class ClassBankAccount {
 	}
 	
 	
-	public ClassBankAccount(String accountHolderName, double balance, double depositAmount) {
+	
+	public ClassBankAccount(String accountHolderName, double balance) {
 		super();
 		this.accountHolderName = accountHolderName;
 		this.balance = balance;
-		this.depositAmount = depositAmount;
 	}
 
 
@@ -26,9 +24,11 @@ public abstract class ClassBankAccount {
 	}
 
 
+
 	public void setAccountHolderName(String accountHolderName) {
 		this.accountHolderName = accountHolderName;
 	}
+
 
 
 	public double getBalance() {
@@ -36,19 +36,18 @@ public abstract class ClassBankAccount {
 	}
 
 
+
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
 
 
-	public double getDepositAmount() {
-		return depositAmount;
+
+	@Override
+	public String toString() {
+		return "ClassBankAccount [accountHolderName=" + accountHolderName + ", balance=" + balance + "]";
 	}
 
-
-	public void setDepositAmount(double depositAmount) {
-		this.depositAmount = depositAmount;
-	}
 
 
 	public abstract double deposit(double amount);

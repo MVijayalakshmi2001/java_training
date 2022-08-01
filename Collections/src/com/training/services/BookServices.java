@@ -30,7 +30,6 @@ public class BookServices implements Crudrepository {
 			if(eachBook.getBookNumber()==id) {
 				found=eachBook;
 			}
-
 		}
 		return found;
 	}

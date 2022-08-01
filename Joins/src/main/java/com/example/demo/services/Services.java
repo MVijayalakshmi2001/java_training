@@ -38,7 +38,7 @@ public class Services implements CrudRepository<LoanApplication> {
 				String customerName = rs.getString(2);
 				long phoneNumber = rs.getLong(3);
 				double creditScore=rs.getDouble(4);
-
+  
 				int applicationNumber=rs.getInt(5);
 				int customerRef=rs.getInt(6);
 				double loanAmount =rs.getDouble(7);

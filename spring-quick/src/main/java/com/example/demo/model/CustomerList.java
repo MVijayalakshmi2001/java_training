@@ -16,5 +16,4 @@ import lombok.experimental.FieldDefaults;
 public class CustomerList {
 	List<Customer> custList;
 	
-
 }

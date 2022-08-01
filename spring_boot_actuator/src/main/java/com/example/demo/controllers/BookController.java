@@ -13,8 +13,6 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @RequestMapping(path = "/api/v1")
 @Slf4j
- 
-
 public class BookController {
 
 	@GetMapping(path = "/books")

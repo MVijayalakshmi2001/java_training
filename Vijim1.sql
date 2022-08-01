@@ -16,7 +16,7 @@ select * from vijiproduct
 
 describe viji_book
 
-drop table viji_member
+drop table vijim_donor
 
 create table viji1_memeber(membership_id number(5) primary key,membername varchar2(20),membership_type varchar2(20));
 check(membership_type='lifetime' or membership_type='annual' or membership_type='halfyearly' or membership_type='quaterly');
@@ -116,4 +116,6 @@ Primary key (username));
 create table viji_authorities(username varchar(50) not null,authority varchar(50) not null,
 constraint fk_viji_authorities_users foreign key(username) references viji_users(username));
 
-select * from viji_credit_card
+select * from viji_cab_driver
+
+
