@@ -9,5 +9,5 @@ public interface StudentRepository {
 	public Student add(Student entity);
 	
 	public List<Student> findAll();
-	
+		
 }

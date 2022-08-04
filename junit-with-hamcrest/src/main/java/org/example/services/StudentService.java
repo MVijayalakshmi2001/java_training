@@ -26,5 +26,29 @@ public class StudentService {
 		return this.repo.findAll();
 	}
 	
+	public int findStudentSize() {
+		
+		return this.repo.findAll().size();
+	}
+	
+	
+
+
+	public Student addWithCondition(Student student) {
+
+		Student added=null;
+		
+		if(student.getRollNumber() >2000) {
+			
+		repo.add(student);
+		
+		added=student;
+		
+		}
+		return added;
+		
+		}
+
+	
 }
 	
